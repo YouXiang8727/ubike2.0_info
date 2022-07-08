@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomStyle.TextView.UbikeDataTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/UbikeDataTitleTextSize</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingStart">@dimen/UbikeDataTitlePaddingStartAndEnd</item>
+        <item name="android:paddingTop">@dimen/UbikeDataTitlePaddingTopAndBottom</item>
+        <item name="android:paddingEnd">@dimen/UbikeDataTitlePaddingStartAndEnd</item>
+        <item name="android:paddingBottom">@dimen/UbikeDataTitlePaddingTopAndBottom</item>
+    </style>
+
+    <dimen name="UbikeDataTitleTextSize">22sp</dimen>
+    <dimen name="UbikeDataTitlePaddingStartAndEnd">8dp</dimen>
+    <dimen name="UbikeDataTitlePaddingTopAndBottom">16dp</dimen>
+</resources>
