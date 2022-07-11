@@ -11,5 +11,5 @@ interface UbikeApiService {
     }
 
     @GET("/dotapp/youbike/v2/youbike_immediate.json")
-    suspend fun getData(): Response<List<UbikeResponse>>
+    fun getData(): Response<List<UbikeResponse>>
 }

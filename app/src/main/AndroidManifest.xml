@@ -4,7 +4,7 @@
     package="com.youxiang8727.ubike20_info">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:name=".App"
@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ubike20_Info"
         tools:targetApi="31">
+        <service
+            android:name=".service.UbikeDataService"
+            android:enabled="true"
+            android:exported="true"></service>
 
         <activity
             android:name=".MainActivity"

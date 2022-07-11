@@ -19,10 +19,4 @@ class MainViewModel @Inject constructor(
 
     private val ubikeResponseMutableLiveData: MutableLiveData<List<UbikeResponse>> = MutableLiveData(null)
     val ubikeResponseLiveData = ubikeResponseMutableLiveData
-
-    init {
-        viewModelScope.launch {
-            ubikeResponseMutableLiveData.value = ubikeApiService.getData().body()
-        }
-    }
 }

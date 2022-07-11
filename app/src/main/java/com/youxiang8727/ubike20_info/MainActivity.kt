@@ -1,5 +1,6 @@
 package com.youxiang8727.ubike20_info
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.youxiang8727.ubike20_info.databinding.ActivityMainBinding
 import com.youxiang8727.ubike20_info.model.UbikeResponse
+import com.youxiang8727.ubike20_info.service.UbikeDataService
 import com.youxiang8727.ubike20_info.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -31,11 +33,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerViewUbikeDataList.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
         binding.recyclerViewUbikeDataList.adapter = adapter
 
-        viewModel.ubikeResponseLiveData.observe(this, Observer {
-            if (it != null){
-                adapter.setData(it)
-            }
-        })
+        startService(Intent(this, UbikeDataService::class.java))
     }
 
     inner class RecyclerViewUbikeResponseAdapter: RecyclerView.Adapter<RecyclerViewUbikeResponseAdapter.ViewHolder>(){
